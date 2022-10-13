@@ -3,6 +3,8 @@
 #include <string.h>
 
 int calcolaLoop(char *);
+int calcolaNOTail(char *, int);
+int calcolaTail(char *, int, int);
 
 int calcolaLoop(char *array)
 {

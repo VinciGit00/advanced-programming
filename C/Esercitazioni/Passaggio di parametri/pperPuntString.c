@@ -11,6 +11,7 @@ void cambiaLettera(char **p)
 {
     for (int i = 0; i < strlen(*p); i++)
     {
+        // Importante la notazione
         if (*(*p + i) == 'a')
         {
             *(*p + i) = 'A';

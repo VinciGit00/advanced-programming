@@ -42,7 +42,6 @@ char *vocalizza_it(char *s)
 // Ricorsiva senza tail
 // base della ricorsione: se la stringa è vuota ritorna una stringa vuota
 // Se il primo carattere è una vocale lo concateno altrimenti rimane uguale e vado avanti
-
 char *vocalizza_rec_noTail(char *s)
 {
     // base: stringa vuota -> Crea il risultato e aggiunge il terminatore
@@ -100,4 +99,6 @@ int main()
     printf("iterativa vecchia: %s, nuova: %s \n", nome, res);
     printf("ricorsiva vecchia: %s, nuova: %s \n", nome, res2);
     printf("ricorsiva vecchia: %s, nuova: %s", nome, res3);
+
+    free(*res3);
 }
