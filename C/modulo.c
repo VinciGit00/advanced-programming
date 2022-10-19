@@ -1,0 +1,6 @@
+
+int ora;
+
+void printSudente()
+{
+}
