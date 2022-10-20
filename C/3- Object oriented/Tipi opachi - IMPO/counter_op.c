@@ -6,11 +6,20 @@ struct contatore
     int valore
 };
 
+// Ritorna al puntatore alla struttura che creo
 contatore_pointer mk_counter()
 {
+    /* Devo creare un malloc prima di tutto
     struct contatore res;
     res.valore = 0;
-    return &res; // Ritorna un dangling pointer sullo stack perchè viene restituito
+    return &res; // Ritorna un dangling pointer sullo stack perchè viene restituito*/
+
+    // Creo il puntatore e gli alloco la memoria
+    contatore_pointer res = malloc(sizeof(struct contatore));
+
+    res->valore = 0;
+
+    return res;
 }
 
 int getvalue(contatore_pointer pc)

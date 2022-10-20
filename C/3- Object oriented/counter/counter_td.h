@@ -6,6 +6,7 @@
 typedef int contatore;
 
 void reset(contatore *);
+
 void incrementa(contatore *);
 
 // Potrei passare anche il puntatore, non cambia niente, ma il puntatore occupa meno spazio

@@ -2,6 +2,7 @@
 #ifndef COUNTER_OP_H
 #define COUNTER_OP_H
 
+// Il primo è il nome della struttura, il secondo è il nome del puntatore
 // Un counter è un int
 typedef struct contatore *contatore_pointer;
 

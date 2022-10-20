@@ -16,7 +16,7 @@ struct arrayint
     int n;
 };
 
-// Restituisco il puntatore alla strutura
+// Restituisco il puntatore alla strutura (vedi riga 4)
 arrayintref make(int n)
 {
     arrayintref res = malloc(sizeof(struct arrayint));

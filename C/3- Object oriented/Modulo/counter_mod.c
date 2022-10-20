@@ -1,8 +1,8 @@
-
 #define N_contatori 100
 
 static contatori[N_contatori];
 
+// non è possibile accedere al di fuori dell'interfaccia
 static int contatore;
 
 void reset()
@@ -10,15 +10,15 @@ void reset()
     contatore = 0;
 }
 
-/**
- * void reset(index i) {
- *  contatori[i] = 0
- * }
- * void inc(index i)
- *{
- *   contatori(i)++;
- *}
- */
+void reset2(int i)
+{
+    contatori[i] = 0;
+}
+
+void inc2(int i)
+{
+    contatori[i]++;
+}
 
 void inc()
 {
