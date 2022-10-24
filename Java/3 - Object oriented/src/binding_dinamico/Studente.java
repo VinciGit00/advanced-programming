@@ -9,7 +9,7 @@ class StudenteClass {
 	
 	 @Override
 	    public String toString() {
-		 return Integer.toString(matricola);
+		 return "Matricola: "+Integer.toString(matricola);
 	    }
 }
 

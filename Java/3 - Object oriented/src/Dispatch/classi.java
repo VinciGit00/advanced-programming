@@ -33,10 +33,6 @@ public class classi {
 		A value3 = new B(); //Istanzio un A
 		
 		value3.foo(value1);
-		
-	
-		
-	
 	}
 
 }
