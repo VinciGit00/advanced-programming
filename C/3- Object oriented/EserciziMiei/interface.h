@@ -17,6 +17,6 @@ char *getsurname(struttura_pointer p);
 
 int getNumber(struttura_pointer p);
 
-void deleteall(struttura_pointer *p);
+void deleteall(struttura_pointer p);
 
 #endif

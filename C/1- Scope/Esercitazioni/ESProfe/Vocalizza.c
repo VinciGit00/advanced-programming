@@ -100,5 +100,5 @@ int main()
     printf("ricorsiva vecchia: %s, nuova: %s \n", nome, res2);
     printf("ricorsiva vecchia: %s, nuova: %s", nome, res3);
 
-    free(*res3);
+    free(res3);
 }

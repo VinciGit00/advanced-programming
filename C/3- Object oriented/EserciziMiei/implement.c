@@ -49,8 +49,8 @@ int getNumber(struttura_pointer p)
     return p->number;
 }
 
-void deleteall(struttura_pointer *p)
+void deleteall(struttura_pointer p)
 {
-    free(*p);
+    free(p);
     p = NULL;
 }
