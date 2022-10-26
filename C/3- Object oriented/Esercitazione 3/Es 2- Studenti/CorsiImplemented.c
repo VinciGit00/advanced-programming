@@ -1,9 +1,9 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "StudenteInterface.h"
 #include "Studente.c"
 #include "CorsiInterface.h"
+#include "StudenteInterface.h"
 
 struct corso
 {
@@ -20,21 +20,28 @@ corsopointer mkCorso(char nome[40])
     return res;
 }
 
-void addStudent(corsopointer c, struct student *s)
+void addStudent(corsopointer c, studentpointer s)
 {
 
     struct student *sttemp = malloc(sizeof(struct student) * c->nStudent);
 
     for (int i = 0; i < c->nStudent; i++)
     {
-        *(sttemp + i * sizeof(struct corso)) = *(c->students + i * sizeof(struct corso));
+        *(sttemp + i * sizeof(struct student)) = *(c->students + i * sizeof(struct student));
     }
 
-    *(sttemp + c->nStudent * sizeof(struct corso)) = *s;
+    *(sttemp + c->nStudent * sizeof(struct student)) = *s;
 
     c->nStudent++;
 
     free(c->students);
 
     c->students = sttemp;
+}
+
+void deletecourse(corsopointer *s)
+{
+    free((*s)->students);
+    free(*s);
+    *s = NULL;
 }

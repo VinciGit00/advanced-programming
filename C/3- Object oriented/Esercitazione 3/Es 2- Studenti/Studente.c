@@ -1,6 +1,8 @@
 #include "StudenteInterface.h"
 #include <stdlib.h>
 
+static int n_stud = 0;
+
 struct student
 {
     char name[30];
@@ -10,15 +12,15 @@ struct student
     int *voti;
 };
 
-studentpointer makeStudent(char n[30], char *c, int matricola)
+studentpointer makeStudent(char n[30], char *c)
 {
     studentpointer res = malloc(sizeof(struct student));
     strcpy(res->name, n);
-    res->surname = malloc(sizeof(char) * strlen(c));
+    res->surname = malloc(sizeof(char) * strlen(c) + 1);
     strcpy(res->surname, c);
 
     res->nvoti = 0;
-    res->matricola = matricola;
+    res->matricola = ++n_stud;
 
     return res;
 }
@@ -67,11 +69,11 @@ void stampaMedia(studentpointer s)
     printf("Media: %f", res);
 }
 
-void deleteStudent(studentpointer s)
+void deleteStudent(studentpointer *s)
 {
     // Per ogni malloc faccio una delete
-    free(s->surname);
-    free(s->voti);
-    free(s);
+    free((*s)->surname);
+    free((*s)->voti);
+    free(*s);
     s = NULL;
 }

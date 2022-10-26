@@ -1,9 +1,9 @@
-#ifndef COUNTER_INT_H
-#define COUNTER_INT_H
+#ifndef STUDENT_INT_H
+#define STUDENT_INT_H
 
 typedef struct student *studentpointer;
 
-studentpointer makeStudent(char *n, char *c, int matricola);
+studentpointer makeStudent(char *n, char *c);
 
 void printstudent(studentpointer s);
 
@@ -13,6 +13,6 @@ void addVoto(studentpointer s, int voto);
 
 void stampaMedia(studentpointer s);
 
-void deleteStudent(studentpointer s);
+void deleteStudent(studentpointer *s);
 
 #endif

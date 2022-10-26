@@ -5,11 +5,14 @@
 #include "Studente.c"
 #include "StudenteInterface.h"
 
+//#include "CorsiInterface.h"
+//#include "CorsiImplemented.c"
+
 int main(int argc, char const *argv[])
 {
     studentpointer s1;
 
-    s1 = makeStudent("Marco", "Vinciguerra", 1064889);
+    s1 = makeStudent("Marco", "Vinciguerra");
 
     printstudent(s1);
     char *result = studentData(s1);
@@ -20,6 +23,9 @@ int main(int argc, char const *argv[])
     addVoto(s1, 20);
 
     stampaMedia(s1);
+
+    // Delete
+    deleteStudent(&s1);
 
     free(result);
 }
