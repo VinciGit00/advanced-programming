@@ -16,6 +16,7 @@ studentpointer makeStudent(char n[30], char *c)
 {
     studentpointer res = malloc(sizeof(struct student));
     strcpy(res->name, n);
+    // Alloco +1 perchè  devo aggiungere il terminatore
     res->surname = malloc(sizeof(char) * strlen(c) + 1);
     strcpy(res->surname, c);
 
@@ -27,6 +28,7 @@ studentpointer makeStudent(char n[30], char *c)
 
 void addVoto(studentpointer s, int voto)
 {
+    // Vettore degli interi
     int *temp = malloc(sizeof(s->nvoti) + 1);
 
     for (int i = 0; i < s->nvoti; i++)
@@ -66,7 +68,7 @@ void stampaMedia(studentpointer s)
     }
     res /= s->nvoti;
 
-    printf("Media: %f", res);
+    printf("Media: %f \n", res);
 }
 
 void deleteStudent(studentpointer *s)

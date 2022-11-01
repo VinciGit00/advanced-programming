@@ -9,6 +9,8 @@ class Connection {
 		System.out.println(string);
 	}
 	
+	
+	//Parte importante
 	//Metodo che viene creato quando l'oggetto viene deallocato
 	@Override
 	protected void finalize() throws Throwable {

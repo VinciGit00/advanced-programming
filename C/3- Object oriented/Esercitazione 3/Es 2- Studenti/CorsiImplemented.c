@@ -1,47 +1,63 @@
 
 #include <stdio.h>
 #include <string.h>
-#include "Studente.c"
+#include <stdlib.h>
+
 #include "CorsiInterface.h"
 #include "StudenteInterface.h"
 
 struct corso
 {
-    char name[40];
-    struct student *students;
-    int nStudent;
+    char *n;
+    // Contiene tutti gli studenti
+    studentpointer s;
+    int nstudent;
 };
 
-corsopointer mkCorso(char nome[40])
+corsopointer mkCorso(char *string)
 {
     corsopointer res = malloc(sizeof(struct corso));
-    res->students = NULL;
-    res->nStudent = 0;
+    // Perchè devo aggiungere il terminatore
+    res->n = malloc(sizeof(char) * strlen(string) + 1);
+    strcpy(res->n, string);
+    res->s = NULL;
+    res->nstudent = 0;
     return res;
 }
 
-void addStudent(corsopointer c, studentpointer s)
+void addStudent(corsopointer c, studentpointer student)
 {
+    studentpointer temp = malloc(sizeof(studentpointer) * (c->nstudent + 1));
 
-    struct student *sttemp = malloc(sizeof(struct student) * c->nStudent);
-
-    for (int i = 0; i < c->nStudent; i++)
+    for (int i = 0; i < c->nstudent; i++)
     {
-        *(sttemp + i * sizeof(struct student)) = *(c->students + i * sizeof(struct student));
+        temp[i] = *(c + i * sizeof(studentpointer))->s;
     }
+    temp[c->nstudent * sizeof(studentpointer)] = *student;
 
-    *(sttemp + c->nStudent * sizeof(struct student)) = *s;
-
-    c->nStudent++;
-
-    free(c->students);
-
-    c->students = sttemp;
+    c->nstudent++;
+    free(c->s);
+    c->s = temp;
 }
 
-void deletecourse(corsopointer *s)
+void printcourse(corsopointer c)
 {
-    free((*s)->students);
-    free(*s);
-    *s = NULL;
+    studentpointer *f = c->s;
+
+    printf("%s", c->n);
+
+    for (int i = 0; i < c->nstudent; i++)
+    {
+        studentpointer *parola = *(f + i*(c->+));
+        printf("%s \n", parola);
+    }
+}
+
+void deletecourse(corsopointer *c)
+{
+    // Per ogni malloc creata devo liberare la malloc
+    free((*c)->n);
+    free((*c)->s);
+    free(*c);
+    c = NULL;
 }
