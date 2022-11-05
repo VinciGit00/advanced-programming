@@ -9,8 +9,13 @@
 struct corso
 {
     char *n;
+
     // Contiene tutti gli studenti
-    studentpointer s;
+    // Puntatore ad un puntatore perchè è un vettore
+    // Per allocare un array
+    // studentpointer s[10];
+
+    studentpointer *s;
     int nstudent;
 };
 
@@ -20,6 +25,8 @@ corsopointer mkCorso(char *string)
     // Perchè devo aggiungere il terminatore
     res->n = malloc(sizeof(char) * strlen(string) + 1);
     strcpy(res->n, string);
+
+    // Non alloco niente per gli studenti perchè inizialmente ne ho 0
     res->s = NULL;
     res->nstudent = 0;
     return res;
@@ -27,13 +34,17 @@ corsopointer mkCorso(char *string)
 
 void addStudent(corsopointer c, studentpointer student)
 {
-    studentpointer temp = malloc(sizeof(studentpointer) * (c->nstudent + 1));
+
+    // Metto * perchè è un vettore di studenti
+    studentpointer *temp = malloc(sizeof(studentpointer) * (c->nstudent + 1));
 
     for (int i = 0; i < c->nstudent; i++)
     {
-        temp[i] = *(c + i * sizeof(studentpointer))->s;
+        // Faccio cambiare il puntatore
+        *(temp + i) = *(c->s + i);
     }
-    temp[c->nstudent * sizeof(studentpointer)] = *student;
+
+    *(temp + c->nstudent) = student;
 
     c->nstudent++;
     free(c->s);
@@ -44,11 +55,11 @@ void printcourse(corsopointer c)
 {
     studentpointer *f = c->s;
 
-    printf("%s", c->n);
+    printf("%s \n", c->n);
 
     for (int i = 0; i < c->nstudent; i++)
     {
-        studentpointer *parola = *(f + i*(c->+));
+        studentpointer *parola = *(c->s + i);
         printf("%s \n", parola);
     }
 }

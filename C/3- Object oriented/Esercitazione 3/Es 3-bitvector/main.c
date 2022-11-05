@@ -19,7 +19,7 @@ int main(int argc, char const *argv[])
     print(p1);
 
     bitvectorPointer p3;
-    p3 = AND(p1, p2);
+    p3 = and(p1, p2);
 
     print(p3);
 }

@@ -10,8 +10,6 @@ bitvectorPointer mkBitvector();
 
 void add(bitvectorPointer p, int n[], int dim);
 
-int AND(bitvectorPointer p1, bitvectorPointer p2);
-
 int OR(bitvectorPointer p1, bitvectorPointer p2);
 
 int NOT(bitvectorPointer p1);

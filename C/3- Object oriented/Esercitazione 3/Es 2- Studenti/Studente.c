@@ -28,7 +28,7 @@ studentpointer makeStudent(char n[30], char *c)
 
 void addVoto(studentpointer s, int voto)
 {
-    // Vettore degli interi
+    // Vettore degli interi nuovo a cui devo allocare altra memoria
     int *temp = malloc(sizeof(s->nvoti) + 1);
 
     for (int i = 0; i < s->nvoti; i++)
