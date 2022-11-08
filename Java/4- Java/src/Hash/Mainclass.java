@@ -22,6 +22,7 @@ class Person {
 		return CF.hashCode();
 	}
 }
+
 public class Mainclass {
 
 	public static void main(String[] args) {
