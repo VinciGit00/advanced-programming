@@ -1,13 +1,14 @@
+package Singleton;
 
 public class Terra {
 
 	private Terra() {
 		
 	}
-	//ALTERNATIVA 1
+	//ALTERNATIVA 1: istanzio subito la classe singleton
 	//public static final Terra TERRA = new Terra();
 	
-	//ALTERNATIVA 2
+	//ALTERNATIVA 2: istanzio in seguito la classe singleton
 	private static Terra TERRA;
 	
 	public static  Terra getTerra() {
