@@ -37,7 +37,7 @@ public class ClassiInheritance {
 		c.method(0);
 
 		c.Impossible();
-		//Non è possibile farlo
+		//Non è possibile farlo perchè creo un B, non un C
 		//c.Impossible2();
 		
 		C finale = new C();
