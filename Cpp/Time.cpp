@@ -62,7 +62,7 @@ int main()
 
     // Alloca nello heap
     Time *pt2 = new Time();
-    delete (*pt2);
+    // delete (*pt2);
 }
 
 Time::Time(int o, int m, int s)
