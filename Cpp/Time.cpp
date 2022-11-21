@@ -52,7 +52,8 @@ int main()
     refTime.printMilitary();
 
     // Crea 5 interi sullo stack di attivazione
-    int pluto[5];
+    // int pluto[5];
+
     // pluto è un int*
     int *pippo = new int[5]; // Pippo è un int* ma nello heap
 
@@ -62,7 +63,7 @@ int main()
 
     // Alloca nello heap
     Time *pt2 = new Time();
-    // delete (*pt2);
+    delete pt2;
 }
 
 Time::Time(int o, int m, int s)
