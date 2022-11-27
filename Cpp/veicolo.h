@@ -16,24 +16,18 @@ class veicolo
 public:
 	veicolo();
 	~veicolo();
-
+	int jjj() { return 0; }
 	int numero_ruote(const int i) { return i; }
 
-	void targa() const { targa_veicolo = ""; }
-
-	// Se voglio evitarla metto const
-	void foo(veicolo &v)
-	{
-		v.targa_veicolo = "v"
-	}
+	// void targa() const { targa_veicolo = "";}
 };
+
+extern int k;
 
 void foo(const veicolo &v)
 {
-	v.targa_veicolo = "v"
+	// Errore perchè private
+	// v.targa_veicolo = "";
 }
-
-// Viene allocata in qualche altro modulo
-extern int k;
 
 #endif /* VEICOLO_H_ */

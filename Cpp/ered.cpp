@@ -4,43 +4,44 @@ using namespace std;
 class Edificio
 {
 public:
-    float getSuperficie()
-    {
-        return 0;
-    }
+    float getSuperficie() { return 0; }
     int annocostruzione() { return 1900; }
     int computeAPE(int y) { return y * 2; }
 };
 
-// Con public la visibilità rimane quella della classe base
 class Condominio : public Edificio
 {
 public:
-    int computeAPE(int y)
+    using Edificio::computeAPE;
+    int computeAPE()
     {
-        // Corrisponde a fare super
-        int cape = Edificio::computeAPE(y);
+        int cape = computeAPE(6); //--> errore per redefine
+        // int cape = Edificio::computeAPE(6);
         return cape * 10;
-    }
+    } // redefining
 };
-
 class Villa : private Edificio
 {
-    using Edificio::annocostruzione; // Questo è di nuovo pubblico
+    using Edificio::annocostruzione; // questo è di nuovo pubblico
 };
 
 int main()
 {
     Edificio e;
     cout << e.getSuperficie() << endl;
+    cout << e.computeAPE(5) << endl;
 
     Condominio *c = new Condominio;
+    cout << c->getSuperficie() << endl;
+    cout << c->computeAPE(5) << endl;
 
-    cout << c->getSuperficie();
+    cout << c->Edificio::computeAPE(6) << endl;
 
     Villa *v = new Villa;
-    cout << v->getSuperficie();
 
-    Edificio *pe = new Villa;
-    pe->getSuperficie();
+    // cout << v->getSuperficie() << endl;
+    // cout << v->Edificio::getSuperficie() << endl;
+
+    // Edificio *pe = new Villa;
+    // pe->getSuperficie();
 }
