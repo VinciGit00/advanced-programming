@@ -57,11 +57,14 @@ void uso_smart_pointers()
 
     p->costo = 1000;
 
-    // print_pointers2(p);
+    // Posso farlo
+    //  print_pointers2(p);
 
     // Non posso fare neanche questo
+    // Può essere puntato da uno solo e basta
     // unique_ptr<Computer> p2(new Computer);
     // p2 = p;
+
     print_pointers2(p);
 }
 
