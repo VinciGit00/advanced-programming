@@ -8,6 +8,7 @@ struct vettore
     int n;
     int *values;
 };
+
 vettore_pointer makeVettore(int *p, int dim)
 {
     vettore_pointer result = malloc(sizeof(struct vettore));
@@ -16,6 +17,8 @@ vettore_pointer makeVettore(int *p, int dim)
 
     for (int i = 0; i < dim; i++)
     {
+        // Oppure
+        // result->values[i] = *(p+i);
         *(result->values + i) = *(p + i);
     }
 
@@ -41,7 +44,9 @@ vettore_pointer somma(vettore_pointer v1, vettore_pointer v2)
 
 char *toString(vettore_pointer p)
 {
-    char *result = malloc(sizeof(char) * p->n);
+    char *result = malloc(sizeof(char) * p->n + 1);
+    // Non lo mette in automatico
+    *result = '\0';
 
     for (int i = 0; i < p->n; i++)
     {

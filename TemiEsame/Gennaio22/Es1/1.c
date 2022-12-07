@@ -5,9 +5,9 @@ void bubbleSort(int *p, int dim)
 {
     for (int i = 0; i < dim; i++)
     {
-        for (int j = 0; j < dim; j++)
+        for (int j = i + 1; j < dim; j++)
         {
-            if (*(p + i) < *(p + j))
+            if (*(p + i) > *(p + j))
             {
                 int temp = *(p + i);
                 *(p + i) = *(p + j);

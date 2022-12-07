@@ -21,7 +21,7 @@ int main()
     vettore_pointer result = somma(v1, v2);
     printf("%s \n", toString(result));
 
-    deleteVettore(v1);
-    deleteVettore(v2);
-    deleteVettore(result);
+    deleteVettore(&v1);
+    deleteVettore(&v2);
+    deleteVettore(&result);
 }
