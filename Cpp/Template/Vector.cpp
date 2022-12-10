@@ -21,5 +21,6 @@ int main(int argc, char const *argv[])
 
     for (vector<int>::iterator i = b.begin(); i != b.end(); ++i)
     {
+        cout << *i << " ";
     }
 }

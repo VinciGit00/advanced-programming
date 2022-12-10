@@ -3,7 +3,7 @@
 
 typedef struct vettore *vettore_pointer;
 
-vettore_pointer makeVettore(int *, int);
+vettore_pointer makeVettore(float *, int);
 
 char *toString(vettore_pointer);
 
