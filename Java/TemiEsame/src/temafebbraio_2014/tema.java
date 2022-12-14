@@ -35,7 +35,6 @@ class Persona implements Comparable <Persona>{
 //Non cambia l'inserimento coi generics
 class Studente extends Persona{
 
-	
 	Studente(int age) {
 		super(age);
 	}
