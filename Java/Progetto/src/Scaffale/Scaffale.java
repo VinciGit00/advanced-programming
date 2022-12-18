@@ -34,15 +34,13 @@ String etichettaScaffale;
 
 		Map.Entry<Integer, Prodotto> entry = null;
 		
-		String result = "";
+		String result = this.etichettaScaffale+"\n";
 		
 		while(iterator.hasNext()){
 		    entry = iterator.next();
-		    System.out.println( entry.getKey() + "=>" + entry.getValue() );
-		    result += entry.getKey()+"=> "+entry.getValue();
+		    result += entry.getKey()+"=> "+entry.getValue()+"\n";
 		    
 		}
-
 			return result;
 		}
 	

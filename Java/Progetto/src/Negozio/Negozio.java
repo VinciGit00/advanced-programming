@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
+import Prodotto.Prodotto;
 import Scaffale.Scaffale;
 
 public class Negozio implements NegozioInterface{
@@ -34,5 +35,29 @@ public class Negozio implements NegozioInterface{
 	     
 	    }	
 		return result;
+	}
+
+	@Override
+	public int nScaffali() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int nProdotti() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int addProdotto(Prodotto p) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int addScaffale(Scaffale s) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

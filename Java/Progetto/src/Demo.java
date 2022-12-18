@@ -2,8 +2,17 @@
 public class Demo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+		//Istanzio il negozio
+		
+		// Creo i prodotti
+		
+		// Gli aggiungo agli scaffali
+		
+		//Aggiungo al negozio gli scaffali
+		
+		
+		//Testo i metodi del negozio
+		
+		}
 
 }
