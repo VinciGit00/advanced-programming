@@ -16,9 +16,13 @@ void print_pointers(Computer *p)
 {
     cout << "computer: " << p->costo << endl;
 }
+
 // void print_pointers2(unique_ptr<Computer> *p)
 //{
 // }
+
+// Questo non può essere usato
+// void print_pointers2(unique_ptr<Computer> p)
 
 void print_pointers2(unique_ptr<Computer> &p)
 {

@@ -20,6 +20,11 @@ public class usoArrays {
 		//errore in esecuzione
 		amici[1] = zia;
 		
+		
+		//Questo è possibile farlo!
+		Person []amici2 = new Student[50] ;
+		Object []amici3 = new Student[50] ;
+
 	}
 
 }

@@ -13,7 +13,7 @@ class Persona {
 	@Override
 	public boolean equals(Object obj) {
 		//Questo if è opzionale
-		if (this== obj) return true;
+		if (this == obj) return true;
 		if(obj instanceof Persona)
 		{
 			Persona newP = (Persona) obj;

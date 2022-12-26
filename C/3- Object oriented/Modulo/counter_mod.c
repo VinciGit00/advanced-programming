@@ -3,7 +3,7 @@
 static contatori[N_contatori];
 
 // non è possibile accedere al di fuori dell'interfaccia
-static int contatore;
+static int contatore; // Valore statico
 
 void reset()
 {

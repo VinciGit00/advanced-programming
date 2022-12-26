@@ -14,6 +14,7 @@ int calcolaLoop(char *array)
     }
     return somma;
 }
+
 int calcolaTail(char *array)
 {
 

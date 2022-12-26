@@ -9,7 +9,7 @@ char *vocalizza_it(char *);
 // Singolo carattere bisogna fare un confronto con le singole apici
 bool vocale(char c)
 {
-    return c == 'a' | c == 'e' || c == 'i' || c == 'o' || c == 'u';
+    return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u';
 }
 
 // Restituisce un puntatore/stringa
