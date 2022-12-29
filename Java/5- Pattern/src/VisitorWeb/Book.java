@@ -2,8 +2,9 @@ package VisitorWeb;
 
 //concrete element
 public class Book implements Visitable{
-private double price;
-private double weight;
+	
+	private double price;
+	private double weight;
 
 	//Accept the visitor
 	public void accept(Visitor visitor) {

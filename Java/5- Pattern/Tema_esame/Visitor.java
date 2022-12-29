@@ -1,4 +1,3 @@
-
 interface Visitor <T>{
 	T visit(Cane c);
 	
@@ -10,13 +9,11 @@ class CalcoloFidelity implements Visitor<Integer>{
 	@Override
 	public Integer visit(Cane c) {
 		return 100;
-		
 	}
 
 	@Override
 	public Integer visit(Gatto g) {
 		return 20;
-		
 	}
 	
 }

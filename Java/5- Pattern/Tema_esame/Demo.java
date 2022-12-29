@@ -15,12 +15,13 @@ public class Demo {
 		
 		//Uso la wildcard per prendere entrambi
 		static int sommaFedelta(List<? extends Animale> list) {
+			
+		//Visitor
 		CalcoloFidelity calc = new CalcoloFidelity();
 		
 		int somma = 0;
 		for(Animale x: list) {
 			somma+=x.accept(calc);
-			
 		}
 		
 		return somma;

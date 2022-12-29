@@ -7,6 +7,7 @@ void increment(int *k)
 {
     (*k)++;
     // k++;
+    
 }
 
 int main(int argc, char const *argv[])

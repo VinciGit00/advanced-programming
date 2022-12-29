@@ -8,4 +8,5 @@ public interface Visitor{
   //visit other concrete items
   //public void visit(CD cd);
   //public void visit(DVD dvd);
+  
 }

@@ -1,8 +1,8 @@
-
 interface Visitable{
 	<T> T accept(Visitor<T> v);
 }
 
+//Uso metodi generici
 public abstract class Animale implements Visitable{
 
 }
@@ -22,7 +22,6 @@ class Gatto extends Animale{
 	@Override
 	public <T> T accept(Visitor<T> v) {
 		return v.visit(this);
-
 	}
 	
 }
