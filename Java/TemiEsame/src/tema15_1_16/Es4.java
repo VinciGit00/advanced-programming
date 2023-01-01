@@ -3,7 +3,7 @@ package tema15_1_16;
 import java.util.ArrayList;
 import java.util.Collections;
 
-class VoceDizionario<E extends Comparable<E>, V> implements Comparable<VoceDizionario<E, V>> {
+class VoceDizionario<E extends Comparable<E> , V> implements Comparable<VoceDizionario<E, V>> {
 	E chiave;
 	V valore;
 
@@ -15,7 +15,7 @@ class VoceDizionario<E extends Comparable<E>, V> implements Comparable<VoceDizio
 
 	@Override
 	public String toString() {
-		return "chiave: " + chiave + " valore: " + valore;
+		return "chiave: " + chiave + ", valore: " + valore;
 	}
 
 	@Override
@@ -24,14 +24,13 @@ class VoceDizionario<E extends Comparable<E>, V> implements Comparable<VoceDizio
 		if (obj instanceof VoceDizionario) {
 			VoceDizionario v = (VoceDizionario) obj;
 
-			return v.chiave.equals(obj);
+			return v.chiave.equals(this.chiave);
 		}
 		return false;
 	}
 
 	@Override
 	public int compareTo(VoceDizionario<E, V> o) {
-
 		return chiave.compareTo(o.chiave);
 	}
 
@@ -81,8 +80,7 @@ class Dizionario<E, V> {
 
 	}
 
-	<VoceDizionario extends Comparable<VoceDizionario>, T> void ordina() {
-
+	void ordina() {
 		Collections.sort(this.lista);
 	}
 
@@ -106,6 +104,10 @@ public class Es4 {
 		d.insert("a", "b");
 
 
+		d.stampa();
+		
+		d.ordina();
+		
 		d.stampa();
 
 		System.out.println(d.cerca("a"));

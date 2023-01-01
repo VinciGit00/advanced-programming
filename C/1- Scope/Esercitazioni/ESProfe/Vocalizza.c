@@ -17,7 +17,7 @@ char *vocalizza_it(char *s)
 {
     // Voglio creare una stringa nuova da restituire;
     // Non va bene char result[100]; //Problema: la dimensione è fissa, potrei mettere strlen result[strlen(s)+1]
-    // Non va bene perchè quando finisce il metood punta su un record dello stack che non vale più
+    // Non va bene perchè quando finisce il metodo punta su un record dello stack che non vale più
     // e quella zona di memoria non è più valida
     //.. scorro
     // Quindi devo usare un malloc
@@ -57,7 +57,7 @@ char *vocalizza_rec_noTail(char *s)
     if (!vocale(*s))
         return rec;
     // Altrimenti concatena s[0] con rec
-    //+2 perchè 1 è il terminatore e l'altro è la lettera del risultato
+    // +2 perchè 1 è il terminatore e l'altro è la lettera del risultato
     char *result = malloc((strlen(rec) + 2) * sizeof(char));
     sprintf(result, "%c%s", s[0], rec);
     // Libero il malloc precedente

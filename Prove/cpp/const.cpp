@@ -58,6 +58,7 @@ int main()
 {
     // Qui posso usare le (), solo con lo stack (senza puntatore) non si può fare
     Time *pt = new Time();
+    // Senza il puntatore
     pt->getHour();
 
     // Posso modificare  i campi private

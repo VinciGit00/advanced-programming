@@ -26,7 +26,7 @@ public class Slicing {
 		
 		Persona p = s;
 
-		//Questo non si può fare -> errore di compilazion
+		//Questo non si può fare -> errore di compilazione
 		//System.out.println(p.cod);
 
 		System.out.println(p.name);

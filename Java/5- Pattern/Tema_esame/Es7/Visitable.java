@@ -32,7 +32,7 @@ class Composto extends Component {
 	Composto(String nome) {
 		super(nome) ;
 	}
-	ArrayList <Component> componentList = new ArrayList();
+	ArrayList <Component> componentList = new ArrayList<Component>();
 	
 	void addComponent(Semplice s) {
 		componentList.add(s);

@@ -45,14 +45,14 @@ class Studente extends Persona{
 //Devo specificarlo qui cosa estende, non nel metodo
 class MyList <T extends Comparable <? super T>> extends ArrayList<T> {
 	
-	public void aggiungi( T element) {
+	public void aggiungi(T element) {
 		this.add(element);
 	}
 	
 	
 	public  T mostYounger() {
 		T min = (T) this.get(0);
-		for(int i =0; i< this.size(); i++) {
+		for(int i = 1; i< this.size(); i++) {
 		if( min.compareTo((T) this.get(i))>0) {
 				min = (T) this.get(i);
 			}
