@@ -4,4 +4,6 @@
 
 int main(int argc, char const *argv[])
 {
+    int c = 7 / 2;
+    printf("%d", c);
 }

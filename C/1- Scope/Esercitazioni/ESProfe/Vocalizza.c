@@ -59,7 +59,8 @@ char *vocalizza_rec_noTail(char *s)
     // Altrimenti concatena s[0] con rec
     // +2 perchè 1 è il terminatore e l'altro è la lettera del risultato
     char *result = malloc((strlen(rec) + 2) * sizeof(char));
-    sprintf(result, "%c%s", s[0], rec);
+    // sprintf(result, "%c%s", s[0], rec);
+    sprintf(result, "%c%s", *s, rec);
     // Libero il malloc precedente
     free(rec); // Altrimenti butto via memoria
     return result;
@@ -70,7 +71,7 @@ char *vocalizza_tail_help(char *s, char *result)
     // Se s è vuota finita return result
     // Se s[0] è vocale aggiungilo a result e continua da s+1
     // Se s[0] non  è vocale continua da s+1
-    if (*s == 0) // fine
+    if (*s == 0) // fine dell'iterazione
         return result;
     if (vocale(s[0]))
     {
@@ -81,6 +82,7 @@ char *vocalizza_tail_help(char *s, char *result)
 
 char *vocalizza_tail(char *s)
 {
+    // Alloco più del necessario
     char *result = malloc((strlen(s) + 1) * sizeof(char));
     result[0] = '\0';
     return vocalizza_tail_help(s, result);

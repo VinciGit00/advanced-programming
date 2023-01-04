@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 interface Visitable{
-	<T> T accept(Visitor <T> v);
+	 <T> T accept(Visitor <T> v);
 }
 
 public abstract class Lavoratore implements Visitable{

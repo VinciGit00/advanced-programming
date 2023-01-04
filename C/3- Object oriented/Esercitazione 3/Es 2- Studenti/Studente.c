@@ -41,6 +41,7 @@ void addVoto(studentpointer s, int voto)
 
     free(s->voti);
     s->voti = temp;
+    free(temp);
 }
 
 void printstudent(studentpointer s)
@@ -51,7 +52,7 @@ char *studentData(studentpointer s)
 {
     // Name: 4 lettere
     // Surname: 7 lettere
-    // Ulteriori 3 spazi
+    // Ulteriori 3 spazi (2 spazi e 1 terminatores)
     char *result = malloc(sizeof(char) * (strlen(s->name) + strlen(s->surname)));
     sprintf(result, "%s%s", "name ", s->name);
     sprintf(result, "%s%s", result, ", surname: ");

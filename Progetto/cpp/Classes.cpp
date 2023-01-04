@@ -19,16 +19,6 @@ private:
     string birthday;
 };
 
-class Studente : public virtual Personale
-{
-public:
-    Studente(string, string, string, string, int);
-
-private:
-    string faculty;
-    int codMatricola;
-};
-
 class Lavoratore : public virtual Personale
 {
 public:
@@ -80,12 +70,6 @@ Lavoratore::Lavoratore(string n, string s, string b, float st, string se, string
     stipendio = st;
     sede = se;
     dipartimento = d;
-}
-
-Studente::Studente(string n, string s, string b, string f, int cod) : Personale(n, s, b)
-{
-    faculty = f;
-    codMatricola = cod;
 }
 
 Segretario::Segretario(string n, string s, string b, float st, string se, string d, string a) : Lavoratore(n, s, b, st, se, d)
