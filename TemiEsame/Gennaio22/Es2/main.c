@@ -5,7 +5,7 @@
 
 int main()
 {
-    int array[] = {1, 2};
+    int array[] = {100, 200};
     int *p = array;
     vettore_pointer v1 = makeVettore(p, sizeof(array) / sizeof(int));
 

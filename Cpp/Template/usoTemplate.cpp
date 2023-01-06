@@ -1,14 +1,17 @@
 #include <iostream>
 using namespace std;
 
-// Scambia x con y
+// Metodo con gli interi
+//  Scambia x con y
 void swap(int &x, int &y)
 {
     int temp = x;
     x = y;
     y = temp;
 }
-// template <> myswap
+
+// Metodo con i generics
+//  template <> myswap
 template <typename T>
 void myswap(T &x, T &y)
 {

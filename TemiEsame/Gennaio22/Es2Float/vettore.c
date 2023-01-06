@@ -52,6 +52,7 @@ char *toString(vettore_pointer p)
     {
         sprintf(result, "%s %f", result, *(p->values + i));
     }
+    printf("%d \n", sizeof(result));
 
     return result;
 }

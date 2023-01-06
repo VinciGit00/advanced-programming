@@ -44,6 +44,8 @@ vettore_pointer somma(vettore_pointer v1, vettore_pointer v2)
 
 char *toString(vettore_pointer p)
 {
+    // Questa allocazione della memoria non va bene
+
     char *result = malloc(sizeof(char) * p->n + 1);
     // Non lo mette in automatico
     *result = '\0';
@@ -52,7 +54,7 @@ char *toString(vettore_pointer p)
     {
         sprintf(result, "%s %d", result, *(p->values + i));
     }
-
+    printf("%d \n", sizeof(result));
     return result;
 }
 
