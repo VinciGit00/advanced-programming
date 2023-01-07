@@ -10,7 +10,7 @@ public interface NegozioInterface {
 	
 	public int nProdotti();
 	
-	public int addProdotto(Prodotto p);
+	public void printMagazzino();
 	
-	public int addScaffale(Scaffale s);
+	public void addScaffale(Scaffale s);
 }

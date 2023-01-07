@@ -6,12 +6,11 @@ import java.util.TreeMap;
 import Prodotto.Prodotto;
 
 public class Scaffale implements ScaffaleInterface, Comparable <Scaffale>{
-String etichettaScaffale;
-	TreeMap<Integer,  Prodotto> tree_map = new TreeMap<Integer, Prodotto>();
+public String etichettaScaffale;
+	public TreeMap<Integer,  Prodotto> tree_map = new TreeMap<Integer, Prodotto>();
 
-	Scaffale (String etichettaScaffale, TreeMap<Integer,  Prodotto> tree_map ) {
+	public Scaffale (String etichettaScaffale) {
 		this.etichettaScaffale = etichettaScaffale;
-		this.tree_map = tree_map;
 	}
 
 	@Override
@@ -38,7 +37,7 @@ String etichettaScaffale;
 		
 		while(iterator.hasNext()){
 		    entry = iterator.next();
-		    result += entry.getKey()+"=> "+entry.getValue()+"\n";
+		    result += entry.getKey()+" => "+entry.getValue()+"\n";
 		    
 		}
 			return result;
