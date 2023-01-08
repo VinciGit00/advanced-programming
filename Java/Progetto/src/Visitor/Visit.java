@@ -5,37 +5,27 @@ import Prodotto.Portachiavi;
 import Prodotto.Portafoglio;
 import Prodotto.Valigia;
 
-interface Visitor<T> {
-	<T> T visit(Valigia v);
-	<T> T visit(Borsa v);
-	<T> T visit(Portafoglio v);
-	<T> T visit(Portachiavi v);
-}
 
-public class Visit implements Visitor {
+public class Visit implements Visitor <Integer>{
 
 	@Override
-	public Object visit(Valigia v) {
-		// TODO Auto-generated method stub
-		return null;
+	public Integer visit(Valigia v) {
+		return 150;
 	}
 
 	@Override
-	public Object visit(Borsa v) {
-		// TODO Auto-generated method stub
-		return null;
+	public Integer visit(Borsa v) {
+		return 100;
 	}
 
 	@Override
-	public Object visit(Portafoglio v) {
-		// TODO Auto-generated method stub
-		return null;
+	public Integer visit(Portafoglio v) {
+		return 50;
 	}
 
 	@Override
-	public Object visit(Portachiavi v) {
-		// TODO Auto-generated method stub
-		return null;
+	public Integer visit(Portachiavi v) {
+		return 25;
 	}
 
 }

@@ -65,7 +65,8 @@ public class Negozio implements NegozioInterface{
 
 	    	  while(iterator.hasNext()){
 	  		    entry = iterator.next();
-	  		    count++;
+	  		    Prodotto p = (Prodotto) entry.getValue();
+	  		    count+= p.getQuantity();
 	  		}
 	      }	
 	      
