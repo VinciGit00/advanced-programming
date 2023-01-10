@@ -20,8 +20,8 @@ public class Demo {
 
 	}
 
-	static int sommaCosto(ArrayList <?extends Pasto> lista ) {
-		int somma =0;
+	static int sommaCosto(ArrayList <? extends Pasto> lista) {
+		int somma = 0;
 		
 		//Crea la classe visitor che mi permette di restituirmi i calcoli
 		CalcolaCosto c = new CalcolaCosto();

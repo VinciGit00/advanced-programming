@@ -1,17 +1,14 @@
-#include "Personale.cpp"
+#include <iostream>
+#include "Persona.cpp"
+using namespace std;
 
-class Studente : public virtual Personale
+class Studente : public Persona
 {
-public:
-    Studente(string, string, string, string, int);
-
 private:
-    string faculty;
-    int codMatricola;
-};
+    int nmatricola;
+    string corsoStudi;
 
-Studente::Studente(string n, string s, string b, string f, int cod) : Personale(n, s, b)
-{
-    faculty = f;
-    codMatricola = cod;
-}
+public:
+    Studente(string, string, string, int);
+    void set(int m, int c);
+};

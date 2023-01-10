@@ -9,7 +9,7 @@ public class Triple {
 	}
 }
 
-class ListaTriple<T, R extends Comparable <R>, S  extends Comparable <S>> {
+class ListaTriple<T, R extends Comparable <? super R>, S  extends Comparable <? super S>> {
 	ArrayList <T> t = new ArrayList<T>();
 	ArrayList <R> r = new ArrayList<R>();
 	ArrayList <S> s = new ArrayList<S>();

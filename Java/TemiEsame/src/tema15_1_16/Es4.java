@@ -3,7 +3,8 @@ package tema15_1_16;
 import java.util.ArrayList;
 import java.util.Collections;
 
-class VoceDizionario<E extends Comparable<E> , V> implements Comparable<VoceDizionario<E, V>> {
+//Significa che usa il comparable della superclasse
+class VoceDizionario<E extends Comparable<? super E> , V> implements Comparable<VoceDizionario<E, V>> {
 	E chiave;
 	V valore;
 

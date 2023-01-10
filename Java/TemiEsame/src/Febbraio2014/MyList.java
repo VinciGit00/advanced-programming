@@ -28,7 +28,7 @@ class Studente extends Persona {
 }
 
 
-//è necessario mettere il super quando si usa il comaparable
+//è necessario mettere il super quando si usa il comparable
 public class  MyList<T extends Comparable<? super T>> extends ArrayList{
 	
 	public void inserisci(T toAdd) {
